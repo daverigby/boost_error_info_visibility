@@ -6,7 +6,7 @@ find_package(Boost)
 
 add_compile_definitions(_GNU_SOURCE)
 # Changing default visibility to 'default' and everything works...
-set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+set(CMAKE_CXX_VISIBILITY_PRESET hidden CACHE STRING "Default symbol visibility")
 
 add_library(boost-exception-lib SHARED boost_exception_lib.cc)
 target_link_libraries(boost-exception-lib PUBLIC Boost::boost)
